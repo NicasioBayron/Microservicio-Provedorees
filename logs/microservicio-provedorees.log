@@ -1,0 +1,73 @@
+2026-06-19T17:56:31.195-04:00  INFO 21708 --- [provedorees] [main] c.p.provedorees.ProvedoreesApplication   : Starting ProvedoreesApplication using Java 21.0.10 with PID 21708 (C:\Users\Bayro\OneDrive\Desktop\bibliomusic\provedorees\target\classes started by Bayro in C:\Users\Bayro\OneDrive\Desktop\bibliomusic\provedorees)
+2026-06-19T17:56:31.199-04:00  INFO 21708 --- [provedorees] [main] c.p.provedorees.ProvedoreesApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-06-19T17:56:31.904-04:00  INFO 21708 --- [provedorees] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-19T17:56:31.979-04:00  INFO 21708 --- [provedorees] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 1 JPA repository interface.
+2026-06-19T17:56:32.484-04:00  INFO 21708 --- [provedorees] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8086 (http)
+2026-06-19T17:56:32.505-04:00  INFO 21708 --- [provedorees] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-19T17:56:32.505-04:00  INFO 21708 --- [provedorees] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-06-19T17:56:32.579-04:00  INFO 21708 --- [provedorees] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1318 ms
+2026-06-19T17:56:32.768-04:00  INFO 21708 --- [provedorees] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-19T17:56:32.933-04:00  INFO 21708 --- [provedorees] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@52f6900a
+2026-06-19T17:56:32.935-04:00  INFO 21708 --- [provedorees] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-19T17:56:34.810-04:00  INFO 21708 --- [provedorees] [main] liquibase.ui                             : INFO: The drop-all command may result in unrecoverable destructive changes to objects at 'jdbc:mysql://localhost:3306/provedorees?createDatabaseIfNotExist=true&serverTimezone=UTC'.
+To protect against unwanted drops, set --requireForce=true, which will require a --force=true flag on the command.
+Learn more at https://docs.liquibase.com/dropall.
+
+2026-06-19T17:56:34.979-04:00  INFO 21708 --- [provedorees] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2026-06-19T17:56:34.987-04:00  INFO 21708 --- [provedorees] [main] liquibase.command                        : Dropping Database Objects in schema: provedorees.provedorees
+2026-06-19T17:56:34.994-04:00  INFO 21708 --- [provedorees] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-19T17:56:35.526-04:00  INFO 21708 --- [provedorees] [main] liquibase.database                       : Successfully deleted all supported object types in schema provedorees.provedorees.
+2026-06-19T17:56:35.526-04:00  INFO 21708 --- [provedorees] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-19T17:56:35.526-04:00  WARN 21708 --- [provedorees] [main] liquibase.lockservice                    : Failed to release change log lock
+2026-06-19T17:56:35.534-04:00  INFO 21708 --- [provedorees] [main] liquibase.ui                             : All objects dropped from root@localhost@jdbc:mysql://localhost:3306/provedorees?createDatabaseIfNotExist=true&serverTimezone=UTC
+2026-06-19T17:56:35.536-04:00  INFO 21708 --- [provedorees] [main] liquibase.command                        : Command execution complete
+2026-06-19T17:56:35.592-04:00  INFO 21708 --- [provedorees] [main] liquibase.changelog                      : Creating database changelog table with name: provedorees.databasechangelog
+2026-06-19T17:56:35.613-04:00  INFO 21708 --- [provedorees] [main] liquibase.changelog                      : Reading from provedorees.databasechangelog
+2026-06-19T17:56:35.623-04:00  INFO 21708 --- [provedorees] [main] liquibase.snapshot                       : Creating snapshot
+2026-06-19T17:56:35.753-04:00  INFO 21708 --- [provedorees] [main] liquibase.ui                             : Name 'PK_DATABASECHANGELOGLOCK' ignored for PRIMARY key.
+2026-06-19T17:56:35.797-04:00  INFO 21708 --- [provedorees] [main] liquibase.lockservice                    : Successfully acquired change log lock
+2026-06-19T17:56:35.799-04:00  INFO 21708 --- [provedorees] [main] liquibase.command                        : Using deploymentId: 1906192744
+2026-06-19T17:56:35.802-04:00  INFO 21708 --- [provedorees] [main] liquibase.changelog                      : Reading from provedorees.databasechangelog
+2026-06-19T17:56:35.821-04:00  INFO 21708 --- [provedorees] [main] liquibase.ui                             : Running Changeset: db/changelog/db.provedorees.sql::19::naveen
+2026-06-19T17:56:35.849-04:00  INFO 21708 --- [provedorees] [main] liquibase.changelog                      : Custom SQL executed
+2026-06-19T17:56:35.852-04:00  INFO 21708 --- [provedorees] [main] liquibase.changelog                      : ChangeSet db/changelog/db.provedorees.sql::19::naveen ran successfully in 28ms
+2026-06-19T17:56:35.863-04:00  INFO 21708 --- [provedorees] [main] liquibase.ui                             : Running Changeset: db/changelog/db.provedorees.sql::20::naveen
+2026-06-19T17:56:35.870-04:00  INFO 21708 --- [provedorees] [main] liquibase.changelog                      : Custom SQL executed
+2026-06-19T17:56:35.870-04:00  INFO 21708 --- [provedorees] [main] liquibase.changelog                      : ChangeSet db/changelog/db.provedorees.sql::20::naveen ran successfully in 7ms
+2026-06-19T17:56:35.886-04:00  INFO 21708 --- [provedorees] [main] liquibase.util                           : UPDATE SUMMARY
+2026-06-19T17:56:35.886-04:00  INFO 21708 --- [provedorees] [main] liquibase.util                           : Run:                          2
+2026-06-19T17:56:35.886-04:00  INFO 21708 --- [provedorees] [main] liquibase.util                           : Previously run:               0
+2026-06-19T17:56:35.886-04:00  INFO 21708 --- [provedorees] [main] liquibase.util                           : Filtered out:                 0
+2026-06-19T17:56:35.886-04:00  INFO 21708 --- [provedorees] [main] liquibase.util                           : -------------------------------
+2026-06-19T17:56:35.886-04:00  INFO 21708 --- [provedorees] [main] liquibase.util                           : Total change sets:            2
+2026-06-19T17:56:35.890-04:00  INFO 21708 --- [provedorees] [main] liquibase.util                           : Update summary generated
+2026-06-19T17:56:35.891-04:00  INFO 21708 --- [provedorees] [main] liquibase.command                        : Update command completed successfully.
+2026-06-19T17:56:35.891-04:00  INFO 21708 --- [provedorees] [main] liquibase.ui                             : Liquibase: Update has been successful. Rows affected: 10
+2026-06-19T17:56:35.900-04:00  INFO 21708 --- [provedorees] [main] liquibase.lockservice                    : Successfully released change log lock
+2026-06-19T17:56:35.902-04:00  INFO 21708 --- [provedorees] [main] liquibase.command                        : Command execution complete
+2026-06-19T17:56:36.066-04:00  INFO 21708 --- [provedorees] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-19T17:56:36.169-04:00  INFO 21708 --- [provedorees] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.19.Final
+2026-06-19T17:56:36.770-04:00  INFO 21708 --- [provedorees] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-19T17:56:36.855-04:00  WARN 21708 --- [provedorees] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-19T17:56:36.872-04:00  INFO 21708 --- [provedorees] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/provedorees?createDatabaseIfNotExist=true&serverTimezone=UTC]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: provedorees/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-19T17:56:37.621-04:00  INFO 21708 --- [provedorees] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-19T17:56:37.629-04:00  INFO 21708 --- [provedorees] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-19T17:56:37.699-04:00  INFO 21708 --- [provedorees] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-19T17:56:37.813-04:00  WARN 21708 --- [provedorees] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-19T17:56:38.191-04:00  INFO 21708 --- [provedorees] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8086 (http) with context path '/'
+2026-06-19T17:56:38.196-04:00  INFO 21708 --- [provedorees] [main] c.p.provedorees.ProvedoreesApplication   : Started ProvedoreesApplication in 7.543 seconds (process running for 7.984)
+2026-06-19T17:56:46.037-04:00  INFO 21708 --- [provedorees] [http-nio-8086-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-19T17:56:46.039-04:00  INFO 21708 --- [provedorees] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-19T17:56:46.041-04:00  INFO 21708 --- [provedorees] [http-nio-8086-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-06-19T17:56:57.851-04:00  INFO 21708 --- [provedorees] [http-nio-8086-exec-3] c.p.p.service.ProvedoreesService         : Obteniendo todos los proveedores
