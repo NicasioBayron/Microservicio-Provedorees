@@ -19,8 +19,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.proveedores.provedorees.DTO.ProvedoreesDTO;
 import com.proveedores.provedorees.assemblers.ProvedoreesAssembler;
-import com.proveedores.provedorees.model.Provedorees;
 import com.proveedores.provedorees.service.ProvedoreesService;
 
 import lombok.extern.slf4j.Slf4j;
@@ -38,43 +38,44 @@ public class ProvedoreesController {
     }
 
     @GetMapping
-    public CollectionModel<EntityModel<Provedorees>> getAllProvedores() {
+    public CollectionModel<EntityModel<ProvedoreesDTO>> getAllProvedores() {
         log.info("Obteniendo todos los provedores");
-        List<EntityModel<Provedorees>> provedores = provedoreesService.getAllProvedores().stream()
+        List<EntityModel<ProvedoreesDTO>> provedores = provedoreesService.getAllProvedores().stream()
                 .map(provedoreesAssembler::toModel)
                 .collect(Collectors.toList());
-        CollectionModel<EntityModel<Provedorees>> modelo = CollectionModel.of(provedores,
+        CollectionModel<EntityModel<ProvedoreesDTO>> modelo = CollectionModel.of(provedores,
                 linkTo(methodOn(ProvedoreesController.class).crearProvedor(null)).withRel("Crear Provedor")
                         .withType("POST"));
         return modelo;
     }
 
     @GetMapping("/{idProveedor}")
-    public EntityModel<Provedorees> getProvedorById(@PathVariable Long idProveedor) {
+    public EntityModel<ProvedoreesDTO> getProvedorById(@PathVariable Long idProveedor) {
         log.info("OBTENIENDO PROVEEDOR CON ID: " + idProveedor);
-        Provedorees provedorees = provedoreesService.getProvedorById(idProveedor);
-        EntityModel<Provedorees> modelo = provedoreesAssembler.toModel(provedorees);
+        ProvedoreesDTO provedorees = provedoreesService.getProvedorById(idProveedor);
+        EntityModel<ProvedoreesDTO> modelo = provedoreesAssembler.toModel(provedorees);
         modelo.add(linkTo(methodOn(ProvedoreesController.class).getAllProvedores())
                 .withRel("Obtener todos los provedores"));
         return modelo;
     }
 
     @PostMapping
-    public ResponseEntity<EntityModel<Provedorees>> crearProvedor(@RequestBody Provedorees provedorees) {
+    public ResponseEntity<ProvedoreesDTO> crearProvedor(@RequestBody ProvedoreesDTO provedoreesDTO) {
         log.info("Creando provedor");
-        return ResponseEntity.ok(provedoreesAssembler.toModel(provedoreesService.crearProvedor(provedorees)));
+        ProvedoreesDTO provedorees = provedoreesService.crearProvedor(provedoreesDTO);
+        return ResponseEntity.ok(provedorees);
     }
 
     @PutMapping("/{idProveedor}")
-    public ResponseEntity<EntityModel<Provedorees>> actualizarProvedor(@PathVariable Long idProveedor,
-            @RequestBody Provedorees provedorees) {
+    public ResponseEntity<ProvedoreesDTO> actualizarProvedor(@PathVariable Long idProveedor,
+            @RequestBody ProvedoreesDTO provedoreesDTO) {
         log.info("Actualizando provedor");
-        return ResponseEntity
-                .ok(provedoreesAssembler.toModel(provedoreesService.actualizarProvedor(idProveedor, provedorees)));
+        ProvedoreesDTO provedorees = provedoreesService.actualizarProvedor(idProveedor, provedoreesDTO);
+        return ResponseEntity.ok(provedorees);
     }
 
     @DeleteMapping("/{idProveedor}")
-    public ResponseEntity<?> eliminarProvedor(@PathVariable Long idProveedor) {
+    public ResponseEntity<String> eliminarProvedor(@PathVariable Long idProveedor) {
         log.info("Eliminando provedor");
         provedoreesService.eliminarProvedor(idProveedor);
         return ResponseEntity.ok("Proveedor eliminado exitosamente");
